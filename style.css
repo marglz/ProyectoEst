@@ -1,0 +1,295 @@
+/* Estilo del formulario */
+#resena-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#resena-form textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    resize: vertical;
+    font-size: 14px;
+}
+
+.star-rating span {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star-rating span.selected,
+.star-rating span:hover,
+.star-rating span:hover ~ span {
+    color: gold;
+}
+
+/* Estilo de reseñas */
+.resena {
+    border: 1px solid #ddd;
+    border-left: 5px solid #4CAF50;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    max-width: 600px;
+}
+
+.resena-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resena p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+    #map {
+        height: 500px;
+        width: 100%;
+        margin-top: 20px;
+        display: none;
+        }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-top: 10px;
+        }
+
+    /* General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Animación suave al cargar */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #34495e;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1abc9c;
+}
+
+/* Títulos y botones */
+h1 {
+    text-align: center;
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    margin: 0;
+    position: relative;
+    animation: fadeIn 1s ease-in;
+}
+
+.user-info {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.user-icon {
+    font-size: 28px;
+}
+
+.inicio {
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-in;
+}
+
+.boton-buscar {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: fadeIn 1.2s ease-in;
+}
+
+.boton-buscar:hover {
+    background-color: #27ae60;
+}
+
+#map {
+    margin: 30px auto;
+    width: 90%;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    animation: fadeIn 1.5s ease-in;
+}
+
+#lista-estacionamientos {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    animation: fadeIn 1.5s ease-in;
+}
+
+#lista-estacionamientos li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+hr {
+    width: 90%;
+    margin: 30px auto;
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    animation: fadeIn 1.3s ease-in;
+}
+
+h2 {
+    text-align: center;
+    color: #34495e;
+    margin-top: 20px;
+    animation: fadeIn 1.3s ease-in;
+}
+
+button[type="button"] {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 1.4s ease-in;
+}
+
+button[type="button"]:hover {
+    background-color: #8e44ad;
+}
+
+/*Empieza dise;o de el estacionamineto */
+
+ h2 {
+        text-align: center;
+        font-family: 'Segoe UI', sans-serif;
+        margin-top: 40px;
+        color: #2c3e50;
+    }
+
+    .contenedor-cajones {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 20px;
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .cajon {
+        background: #ecf0f1;
+        border: 2px solid #bdc3c7;
+        border-radius: 16px;
+        padding: 20px 10px;
+        font-size: 16px;
+        font-family: 'Segoe UI', sans-serif;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        position: relative;
+    }
+
+    .cajon:hover:not(.ocupado) {
+        background: #2ecc71;
+        color: #fff;
+        transform: translateY(-5px);
+    }
+
+    .libre {
+        background-color: #27ae60;
+        color: white;
+    }
+
+    .ocupado {
+        background-color: #e74c3c;
+        color: white;
+        cursor: not-allowed;
+    }
+
+    .cajon::before {
+        content: attr(data-label);
+        font-size: 22px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .cajon.libre::after {
+        content: "✅ Libre";
+        font-size: 14px;
+        color: #ecf0f1;
+    }
+
+    .cajon.ocupado::after {
+        content: "❌ Ocupado";
+        font-size: 14px;
+        color: #ecf0f1;
+    }
+
+    /*Termina el dise;o de cajones*/
+
+
+

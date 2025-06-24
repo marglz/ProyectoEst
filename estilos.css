@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.pantalla-dividida {
+    display: flex;
+    height: 100vh;
+}
+
+/* Lado Izquierdo: Logo */
+.lado-logo {
+    flex: 1;
+    background: linear-gradient(to bottom right, #1e88e5, #1565c0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.logo {
+    width: 600px;
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+
+.lema {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+/* Lado Derecho: Formulario */
+.lado-formulario {
+    flex: 1;
+    background-color: #f4f6f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.registro-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #069946;
+}
+
+.subtitulo {
+    font-size: 14px;
+    color: #bdbcbc;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-weight: 500;
+    color: #898989;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.input-group input:focus {
+    border-color: #1e88e5;
+    outline: none;
+}
+
+.boton {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e88e5;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #1565c0;
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #1e88e5;
+    text-decoration: none;
+}
+
+/* Modal de error */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+    background-color: white;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .pantalla-dividida {
+        flex-direction: column;
+    }
+
+    
+
+    .lado-logo, .lado-formulario {
+        flex: unset;
+        width: 100%;
+        padding: 30px 20px;
+        height: auto;
+    }
+
+    .lado-logo {
+        border-bottom: 4px solid #e0e0e0;
+    }
+
+    .logo {
+        width: 120px;
+        margin-bottom: 15px;
+    }
+
+    .lema {
+        font-size: 40px;
+    }
+
+    .registro-card {
+        padding: 25px 20px;
+        width: 100%;
+        max-width: none;
+        box-shadow: none;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    .subtitulo {
+        font-size: 13px;
+    }
+
+    .input-group input {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .boton {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .login-link {
+        font-size: 13px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #f0f0f0;
+    }
+
+    .pantalla-dividida {
+        background-color: #121212;
+    }
+
+    .lado-logo {
+        background-color: #1f1f1f;
+        border-right: 1px solid #333;
+    }
+
+    .lema {
+        color: #d6d6d6;
+    }
+
+    .registro-card {
+        background-color: #1e1e1e;
+        color: #f5f5f5;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .input-group input {
+        background-color: #2a2a2a;
+        color: #fff;
+        border: 1px solid #555;
+    }
+
+    .input-group input::placeholder {
+        color: #aaa;
+    }
+
+    .boton {
+        background-color: #00b894;
+        color: #121212;
+    }
+
+    .login-link {
+        color: #cccccc;
+    }
+
+    .login-link a {
+        color: #00cec9;
+    }
+
+    #modalError .modal-contenido {
+        background-color: #2a2a2a;
+        color: #fff;
+    }
+
+    #modalError .close {
+        color: #fff;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 180px;
+    }
+}
+

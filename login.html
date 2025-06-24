@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio de Sesión - BiTE</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Tipografía moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- AOS Animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="pantalla-dividida">
+        <!-- Lado Izquierdo: Logo -->
+        <div class="lado-logo" data-aos="fade-right">
+            <img src="/img/BITE_logo_transparente.png" alt="Logo de BiTE" class="logo">
+            <h2 class="lema">Innovación & Tecnología</h2>
+        </div>
+
+        <!-- Lado Derecho: Formulario de Inicio de Sesión -->
+        <div class="lado-formulario" data-aos="fade-left">
+            <div class="registro-card">
+                <h1 class="titulo" data-aos="zoom-in">Iniciar Sesión</h1>
+                <p class="subtitulo" data-aos="fade-in" data-aos-delay="100">
+                    Accede al sistema de gestión de BiTE
+                </p>
+
+                <!-- id "formLogin" -->
+                <form id="formLogin" data-aos="fade-up" data-aos-delay="200">
+                    <div class="input-group" data-aos="fade-right" data-aos-delay="300">
+                        <label for="nombre">Usuario</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required>
+                    </div>
+                    <div class="input-group" data-aos="fade-left" data-aos-delay="400">
+                        <label for="matricula">Matrícula</label>
+                        <input type="password" id="matricula" name="matricula" placeholder="Ej. AS13-223F" required>
+                    </div>
+                    <button type="submit" class="boton" data-aos="zoom-in" data-aos-delay="500">Iniciar Sesión</button>
+                </form>
+
+                <p class="login-link" data-aos="fade-in" data-aos-delay="600">
+                    ¿No tienes una cuenta? <a href="index.html">Regístrate aquí</a>
+                </p>
+                <div id="respuesta-login"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Error -->
+    <div id="modalError" class="modal">
+        <div class="modal-contenido">
+            <span class="close">&times;</span>
+            <p id="modalMensaje"></p>
+        </div>
+    </div>
+
+    <!-- Tu script y AOS -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
