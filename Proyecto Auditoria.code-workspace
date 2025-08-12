@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../../Users/marti/Desktop/mern-crud/mern-crud/mern-crud"
 		}
 	],
 	"settings": {}
